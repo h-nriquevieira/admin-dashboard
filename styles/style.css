@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   transition: transform 0.35s ease-in-out;
   padding: 24px;  
-  padding-bottom: 100%;
+  padding-bottom: 500vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -184,6 +184,12 @@ main {
   font-weight: bold;
   font-size: 1rem;
   padding: .5rem;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  transform: scale(1.02);
 }
 
 .tool-box {
@@ -277,7 +283,6 @@ main {
 
 .trending-profile .handle {
   margin: 0;
-  padding: 0;
   grid-area: handle;
 }
 
@@ -293,4 +298,13 @@ main {
 .trending-profile svg {
   width: 50px;
   height: auto;
+}
+
+svg {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+svg:hover {
+  transform: scale(1.2);
 }
