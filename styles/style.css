@@ -129,6 +129,7 @@ body {
 
 header {
   padding: 4rem 8px 8px 17px;
+  border-bottom: 6px solid #00000033;
 }
 
 header .img {
@@ -199,4 +200,42 @@ header .user-info {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+}
+
+.projects {
+  background-color: #E2E8F0;
+  padding: 17px;
+}
+
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border-left: 8px solid #F0B43B;
+  border-radius: 15px;
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  margin: 0 0 4px 0; 
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  margin: 0 0 16px 0;
+  font-size: .9rem;
+}
+
+.project-card .icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  gap: 8px;
 }
