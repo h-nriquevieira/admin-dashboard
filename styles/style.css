@@ -132,8 +132,7 @@ header {
   border-bottom: 6px solid #00000033;
 }
 
-header .img,
-.img {
+header .img {
   width: 50px;
   height: 50px;
   background-image: url(../images/profilepic.jpeg);
@@ -219,7 +218,8 @@ main {
 }
 
 .project-card,
-.announcements-card {
+.announcements-card,
+.trending-card {
   background-color: #fff;
   border-left: 8px solid #F0B43B;
   border-radius: 15px;
@@ -247,17 +247,50 @@ main {
   gap: 8px;
 }
 
-.announcements {
+.announcements,
+.trending {
   padding: 17px;
   display: grid;
+  justify-items: stretch;
 }
 
-.announcements-card {
+.announcements-card,
+.trending-card {
   border: none;
-  max-width: 500px;
-  justify-self: center;
 }
 
 .announcements-card .announcement + .announcement {
   border-top: 2px solid lightgray;
+}
+
+.trending-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'img handle'
+                       'img username';
+  column-gap: 1rem;
+}
+
+.trending-profile .img {
+  grid-area: img;
+}
+
+.trending-profile .handle {
+  margin: 0;
+  padding: 0;
+  grid-area: handle;
+}
+
+.trending-profile .name {
+  margin: 0;
+  grid-area: username;
+}
+
+.trending-profile + .trending-profile {
+  margin-top: 2rem;
+}
+
+.trending-profile svg {
+  width: 50px;
+  height: auto;
 }
