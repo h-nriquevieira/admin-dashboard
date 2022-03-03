@@ -60,8 +60,8 @@ nav,
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
-  left: 20px;
+  top: 17px;
+  left: 17px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
@@ -79,6 +79,7 @@ nav,
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 
 .nav-container .hamburger-lines .line {
@@ -123,3 +124,7 @@ nav,
   transform: rotate(-45deg);
 }
 /* End of hamburger menu */
+
+header {
+  padding: 2.5rem 8px 8px 8px;
+}
