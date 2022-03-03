@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav,
@@ -29,15 +29,32 @@ nav,
 }
 
 .sidebar {
-  padding-top: 2rem;
+  padding: 2rem 8px 8px 8px;
   transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
   transition: transform 0.35s ease-in-out;
+  padding: 24px;  
+  position: relative;
+  z-index: 3;
+  color: white;
+  background-color: #2592D4;
+}
+
+.sidebar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  min-height: 100%;
 }
 
 .system-menu {
-  margin-top: auto;
+  margin-top: 4rem;
 }
 
+/* Hamburger menu */
 .nav-container .checkbox {
   position: absolute;
   display: block;
@@ -57,7 +74,7 @@ nav,
   position: absolute;
   top: 17px;
   left: 20px;
-  z-index: 2;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,7 +86,7 @@ nav,
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #F0B43B;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -105,3 +122,4 @@ nav,
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
+/* End of hamburger menu */
