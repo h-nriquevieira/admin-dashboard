@@ -11,13 +11,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav,
-.navbar,
-.nav-container {
-  min-height: 100vh;
-}
-
-
 .logo,
 .page-link,
 .system-link {
@@ -59,6 +52,7 @@ nav,
 }
 
 /* Hamburger menu */
+
 .nav-container .checkbox {
   position: absolute;
   display: block;
@@ -145,6 +139,7 @@ header .img {
   background-size: 50px;
   border-radius: 50%;
   grid-area: icon;
+
 }
 
 header .user-info {
@@ -194,7 +189,7 @@ header .user-info {
 }
 
 .tool-box input {
-  opacity: 0;
+  border: none;
 }
 
 .tool-box label {
