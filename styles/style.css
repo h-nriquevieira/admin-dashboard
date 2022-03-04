@@ -312,6 +312,7 @@ svg:hover {
 @media screen and (min-width: 470px) {
   .buttons {
     grid-template-columns: 1fr 1fr 1fr;
+    width: min(100%, 250px);
   }
 }
 
