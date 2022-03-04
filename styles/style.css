@@ -23,7 +23,7 @@ body {
 
 .sidebar {
   padding: 2rem 8px 8px 8px;
-  transform: translate(-150%);
+  transform: translateX(-150%);
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease-in-out;
@@ -219,7 +219,7 @@ main {
 
 .projects .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
@@ -307,4 +307,84 @@ svg {
 
 svg:hover {
   transform: scale(1.2);
+}
+
+@media screen and (min-width: 470px) {
+  .buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    transform: translateX(0);
+    width: min-content;
+    position: static;
+    padding-bottom: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav,
+  .navbar,
+  .nav-container,
+  .sidebar {
+    height: 100%;
+  }
+
+  .sidebar .logo {
+    margin: 0;
+  }
+
+  .nav-container input[type="checkbox"] ~ .hamburger-lines .line {
+    display: none;
+  }
+
+  .nav-container input[type='checkbox'] {
+    display: none;
+  }
+  
+  body {
+    display: grid;  
+    grid-template-areas: 'nav header header'
+                         'nav main main'
+                         'nav main main';
+  }
+
+  header {
+    grid-area: header
+  }
+
+  nav {
+    grid-area: nav;
+    align-self: stretch;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+}
+
+@media screen and (min-width: 1226px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .projects {
+    grid-column: 1 / 3;
+    grid-row: 1 / -1;
+  }
+
+  .announcements {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+  }
+
+  .trending {
+    grid-column: 3 / 4;
+    grid-row: 4 / 6;
+  }
 }
